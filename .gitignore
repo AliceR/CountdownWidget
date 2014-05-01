@@ -61,3 +61,7 @@ local.properties
 
 # TeXlipse plugin
 .texlipse
+
+# Eclipse project files
+.classpath
+.project
