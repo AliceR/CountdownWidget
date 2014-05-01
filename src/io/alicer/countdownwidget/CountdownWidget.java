@@ -5,9 +5,6 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-import android.widget.ProgressBar;
 import android.widget.RemoteViews;
 
 public class CountdownWidget extends AppWidgetProvider {
@@ -27,7 +24,7 @@ public class CountdownWidget extends AppWidgetProvider {
 		long diffDays = diffHours / 24;
 		long remainDays = diffHours % 24;
 
-		String duration = String.valueOf(diffDays + " ." + remainDays);
+		String duration = String.valueOf(diffDays + "  '" + remainDays + "h");
 		
 		/* Progress Bar */
 		int max = 191;
