@@ -24,7 +24,8 @@ public class CountdownWidget extends AppWidgetProvider {
 		long diffDays = diffHours / 24;
 		long remainDays = diffHours % 24;
 
-		String duration = String.valueOf(diffDays + "  '" + remainDays + "h");
+		String days = String.valueOf(diffDays);
+		String hours = String.valueOf(remainDays + "h");
 		
 		/* Progress Bar */
 		int max = 191;
@@ -42,7 +43,9 @@ public class CountdownWidget extends AppWidgetProvider {
 			RemoteViews views = new RemoteViews(context.getPackageName(),
 					R.layout.main);
 
-			views.setTextViewText(R.id.days, duration);
+			views.setTextViewText(R.id.days, days);
+			views.setTextViewText(R.id.hours, hours);
+			
 			views.setProgressBar(R.id.progress_bar, max, progress, false);			
 
 			appWidgetManager.updateAppWidget(appWidgetId, views);
