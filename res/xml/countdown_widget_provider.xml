@@ -5,7 +5,7 @@
     android:minResizeWidth="70dp"
     android:minResizeHeight="40dp"
     android:updatePeriodMillis="3600000"
-    android:previewImage="@drawable/appwidget_bg"
+    android:previewImage="@drawable/preview"
     android:initialLayout="@layout/main"
     android:resizeMode="horizontal|vertical"
     android:widgetCategory="home_screen|keyguard"
